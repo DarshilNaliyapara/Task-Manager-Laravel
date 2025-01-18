@@ -17,10 +17,14 @@
                         <a href="{{ route('tasks.show', $task) }}" class="text-blue-600 hover:text-blue-800 font-medium">{{ $task->tasks }}</a>
                     </td>
                     <td class="border border-gray-300 px-6 py-3 text-center">
+                        @if ($task->user_id === auth()->id())
                         <a href="{{ route('tasks.edit', $task) }}" class="text-green-600 hover:text-green-800 mr-4 font-medium">Edit</a>
-                        <button onclick="document.getElementById('delete-task').submit();" class="text-red-600 hover:text-red-800 font-medium">
+                        <button form="delete-task" class="text-red-600 hover:text-red-800 font-medium">
                             Delete
                         </button>
+                        @else
+                        Not for you
+                        @endif
                         <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" id="delete-task" class="hidden">
                             @csrf
                             @method('DELETE')
