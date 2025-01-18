@@ -1,4 +1,4 @@
-<p>please run this command before start<p>
+<p>please run this command before start:<p>
 <ul>
 <li>npm run dev
 <li>composer update
