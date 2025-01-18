@@ -11,7 +11,7 @@
                 <div class="p-6 text-white">
                  
                     @if (Route::currentRouteName() === 'alltasks.show')
-                        @include('show')
+                        @include('tasks.show')
                     @endif
                     @if ((Route::currentRouteName() === 'tasks'))
                         @include('tasks.table')
