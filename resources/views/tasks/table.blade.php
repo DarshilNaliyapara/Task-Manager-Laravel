@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             @foreach ($tasks as $task)
-                <tr class="text-white hover:bg-gray-100 hover:text-black">
+                <tr class="text-white bg-gray-900 hover:bg-gray-200 hover:text-black">
                     <td class="border border-gray-300 px-6 py-3">{{ $task->id }}</td>
                     <td class="border border-gray-300 px-6 py-3">{{ $task->user->name }}</td>
                     <td class="border border-gray-300 px-6 py-3">

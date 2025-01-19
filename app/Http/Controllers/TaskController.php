@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Taskmail;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Validator;
 
 class TaskController extends Controller
@@ -18,7 +20,11 @@ class TaskController extends Controller
             'tasks' => 'required|string|max:255',
         ]);
  
-        $request->user()->tasks()->create($validated);
+       $task = $request->user()->tasks()->create($validated);
+        Mail::to($task->user)->queue(
+            new Taskmail($task)
+        );
+
         return redirect('/dashboard');
     }
     public function show(Task $task){
