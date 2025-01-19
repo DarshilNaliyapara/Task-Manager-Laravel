@@ -1,7 +1,8 @@
 <p>please run this command before start:<p>
 <ul>
-<li>npm run dev
 <li>composer update
+<li>npm run dev
+<li>php artisan serve
 <li>php artisan serve
 </ul>
 
