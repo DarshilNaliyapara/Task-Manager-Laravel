@@ -3,7 +3,7 @@
 <li>composer update
 <li>npm run dev
 <li>php artisan serve
-<li>php artisan serve
+<li>php artisan queue:work
 </ul>
 
 # Task-Manager-Laravel
