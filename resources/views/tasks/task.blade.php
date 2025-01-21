@@ -8,7 +8,7 @@
         class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
         <textarea
             class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-white placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-            name="tasks" id="tasks" type="text" value="{{ old('tasks', $task->tasks) }}"
+            name="tasks" id="tasks" type="text"
             placeholder="Enter your task">{{ old('tasks', $task->tasks) }}</textarea>
 
     </div>
